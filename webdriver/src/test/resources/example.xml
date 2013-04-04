@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase seleniumIDEVersion="1.0.7" baseURL="http://mywebsite/">
+<selenese>
+    <command>open</command>
+    <target><![CDATA[/?p=1337]]></target>
+    <value><![CDATA[]]></value>
+</selenese>
+<selenese>
+    <command>assertTextPresent</command>
+    <target><![CDATA[future success]]></target>
+    <value><![CDATA[]]></value>
+</selenese>
+<!--this is a selenium comment-->
+<selenese>
+    <command>clickAndWait</command>
+    <target><![CDATA[link=companies]]></target>
+    <value><![CDATA[]]></value>
+</selenese>
+<selenese>
+    <command>type</command>
+    <target><![CDATA[inputSearch]]></target>
+    <value><![CDATA[awesome]]></value>
+</selenese>
+</TestCase>
