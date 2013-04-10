@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "TestCase")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class TestCase {
+public class SeleniumTestCase {
     @XmlAttribute
     private String seleniumIDEVersion;
     
@@ -25,7 +25,7 @@ public class TestCase {
     private String baseURL;
     
     @XmlElement
-    private List<Selenese> selenese;
+    private List<SeleniumSelenese> selenese;
 
     /**
      * @param seleniumIDEVersion the seleniumIDEVersion to set
@@ -44,7 +44,7 @@ public class TestCase {
     /**
      * @return the selenese
      */
-    public List<Selenese> getSelenese() {
+    public List<SeleniumSelenese> getSelenese() {
         return selenese;
     }
 
@@ -65,7 +65,7 @@ public class TestCase {
     /**
      * @param selenese the selenese to set
      */
-    public void setSelenese(List<Selenese> selenese) {
+    public void setSelenese(List<SeleniumSelenese> selenese) {
         this.selenese = selenese;
     }
 }

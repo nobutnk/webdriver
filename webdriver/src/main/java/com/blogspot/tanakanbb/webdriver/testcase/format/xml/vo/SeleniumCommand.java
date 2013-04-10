@@ -12,9 +12,9 @@ import javax.xml.bind.annotation.XmlValue;
  * @author nobutnk
  *
  */
-@XmlRootElement(name = "target")
+@XmlRootElement(name = "command")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Target {
+public class SeleniumCommand {
 
     @XmlValue
     private String value;
@@ -32,5 +32,4 @@ public class Target {
     public void setValue(String value) {
         this.value = value;
     }
-    
 }

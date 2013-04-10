@@ -8,7 +8,8 @@ import java.net.URL;
 import org.junit.Test;
 
 import com.blogspot.tanakanbb.webdriver.testcase.TestCaseException;
-import com.blogspot.tanakanbb.webdriver.testcase.format.xml.vo.TestCase;
+import com.blogspot.tanakanbb.webdriver.testcase.format.xml.XmlTestCaseParserImpl;
+import com.blogspot.tanakanbb.webdriver.testcase.format.xml.vo.SeleniumTestCase;
 
 public class XmlTestCaseParserImplTest {
 
@@ -20,7 +21,7 @@ public class XmlTestCaseParserImplTest {
         
         XmlTestCaseParserImpl target = new XmlTestCaseParserImpl();
         try {
-            TestCase testCase = target.parse(xml);
+            SeleniumTestCase testCase = target.parse(xml);
             System.out.println(testCase.getSelenese().size());
         } catch (TestCaseException e) {
             e.printStackTrace();

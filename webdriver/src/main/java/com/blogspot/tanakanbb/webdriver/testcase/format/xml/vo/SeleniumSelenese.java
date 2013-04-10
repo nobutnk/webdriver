@@ -14,56 +14,56 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "selenese")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Selenese {
+public class SeleniumSelenese {
 
     @XmlElement
-    private Command command;
+    private SeleniumCommand command;
     
     @XmlElement
-    private Target target;
+    private SeleniumTarget target;
     
     @XmlElement
-    private Value value;
+    private SeleniumValue value;
 
     /**
      * @param command the command to set
      */
-    public void setCommand(Command command) {
+    public void setCommand(SeleniumCommand command) {
         this.command = command;
     }
 
     /**
      * @param target the target to set
      */
-    public void setTarget(Target target) {
+    public void setTarget(SeleniumTarget target) {
         this.target = target;
     }
 
     /**
      * @param value the value to set
      */
-    public void setValue(Value value) {
+    public void setValue(SeleniumValue value) {
         this.value = value;
     }
 
     /**
      * @return the command
      */
-    public Command getCommand() {
+    public SeleniumCommand getCommand() {
         return command;
     }
 
     /**
      * @return the target
      */
-    public Target getTarget() {
+    public SeleniumTarget getTarget() {
         return target;
     }
 
     /**
      * @return the value
      */
-    public Value getValue() {
+    public SeleniumValue getValue() {
         return value;
     }
 }

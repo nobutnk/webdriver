@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.blogspot.tanakanbb.webdriver.testcase.format;
+package com.blogspot.tanakanbb.webdriver.testcase.format.xml;
 
 import java.io.File;
 
@@ -13,7 +13,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.blogspot.tanakanbb.webdriver.testcase.TestCaseException;
-import com.blogspot.tanakanbb.webdriver.testcase.format.xml.vo.TestCase;
+import com.blogspot.tanakanbb.webdriver.testcase.format.TestCaseParser;
+import com.blogspot.tanakanbb.webdriver.testcase.format.xml.vo.SeleniumTestCase;
 
 /**
  * @author nobutnk
@@ -30,11 +31,11 @@ public class XmlTestCaseParserImpl implements TestCaseParser {
      * @see com.blogspot.tanakanbb.webdriver.testcase.format.TestCaseParser#parse(java.lang.String)
      */
     @Override
-    public TestCase parse(File xmlFile) throws TestCaseException {
+    public SeleniumTestCase parse(File xmlFile) throws TestCaseException {
         try {
-            JAXBContext context = JAXBContext.newInstance(TestCase.class);
+            JAXBContext context = JAXBContext.newInstance(SeleniumTestCase.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
-            TestCase testCase = (TestCase) unmarshaller.unmarshal(xmlFile);
+            SeleniumTestCase testCase = (SeleniumTestCase) unmarshaller.unmarshal(xmlFile);
             
             return testCase;
         } catch (JAXBException e) {
